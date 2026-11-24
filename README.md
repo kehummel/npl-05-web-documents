@@ -220,6 +220,10 @@ git commit -m "describe your changes in quotes"
 git push -u origin main
 ```
 
+## Project Personalization
+
+The example project was modified twice for personalizations. First a technical modification was created make sure the code could be changed and still run correctly. Then I applied the techniques to a different dataset. Documentation of these steps can be found in the workflow_d_e_README.md file in the docs folder. I link is found below under the links heading.
+
 ## Developer Notes
 
 - Use the **UP ARROW** and **DOWN ARROW** in the terminal to scroll through past commands.
@@ -243,3 +247,4 @@ testing, documentation, and code quality.
 - [Professional Python Workflow Guide](https://denisecase.github.io/pro-analytics-02/)
 - [Citation](CITATION.cff)
 - [License](LICENSE)
+- [Documentation for Project Personalization: Workflow D & E](docs/workflow_d_e_README.md)
