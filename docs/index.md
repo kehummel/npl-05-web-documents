@@ -93,6 +93,7 @@ provide inputs for subsequent NLP analysis.
 - **Home** - this landing page
 - [**Project Instructions**](project-instructions.md)
 - [**Glossary**](glossary.md)
+- [**Workflow D & E Documentation**](workflow_d_e_README.md)
 
 ## Project Links
 
