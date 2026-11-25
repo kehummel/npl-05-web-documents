@@ -9,7 +9,7 @@ For section D, we a apply a technical modification to the example project. For t
 
 The only file I had to change was the stage03_transform file; every other file remained the same. So I made a copy of it and called it stage03_transform_phaseD.py. Then in the config file I changed the output file names to include phaseD and in the pipeline file I made sure it called the changed file.
 
-[stage03_transform_phaseD.py](../src/nlp/stage03_transform_phaseD.py)
+[stage03_transform_phaseD.py](../src/nlp/stage03_transform_phase_d.py)
 
 ![sentence word count code](images/sentence_count_code.png)
 
@@ -23,6 +23,15 @@ After that I added sentence_count to the records so that it would show up in the
 
 Run using the command:
 uv run python -m nlp.pipeline_web_html_hummel
+
+### Files Used for Custom Application:
+
+- [config_hummel.py](../src/nlp/config_hummel.py)
+- [pipeline_web_html_hummel.py](../src/nlp/pipeline_web_html_hummel.py)
+- [stage01_extract.py](../src/nlp/stage01_extract.py)
+- [stage02_validate.py](../src/nlp/stage02_validate.py)
+- [stage03_transform_hummel.py](../src/nlp/stage03_transform_hummel.py)
+- [stage04_load.py](../src/nlp/stage04_load.py)
 
 For the custom application, I knew I was going to change the data source, but I felt like that wasn't enough of a change because it would just be copying and pasting a line or two, and then trouble shooting if needed. I wasn't expecting a lot of trouble shooting because the technical modification went well so I didn't think that there would need to be much during the custom application.
 
@@ -38,6 +47,8 @@ It was a good thing that I did this in that it helped me catch an error. When I 
 
 ## Article Comparison
 
+In the table are the calculated values for the five different webpages. This table makes it easier to read the calculated values as well as make comparisons between them.
+
 | Arxiv ID   | Author Count  | Title Word Count  | Abstract Word Count | Abstract Sentence Count |
 |--------------|----------|----------|----------|----------|
 | 2602.20021 | 38 | 3 | 177 | 9 |
@@ -45,8 +56,6 @@ It was a good thing that I did this in that it helped me catch an error. When I 
 | 2611.30385 | 5 | 12 | 282 | 12 |
 | 2611.30779 | 4 | 10 | 288 | 8 |
 | 2611.30849 | 3 | 6 | 157 | 5 |
-
-In the table are the calculated values for the five different webpages. This table makes it easier to read the calculated values as well as make comparisons between them.
 
 ## Next Steps
 
