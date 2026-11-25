@@ -55,7 +55,7 @@ from nlp.config import (
 )
 from nlp.stage01_extract import run_extract
 from nlp.stage02_validate import run_validate
-from nlp.stage03_transform import run_transform
+from nlp.stage03_transform_phase_d import run_transform
 from nlp.stage04_load import run_load
 
 # ============================================================

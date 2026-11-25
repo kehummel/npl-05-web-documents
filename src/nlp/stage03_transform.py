@@ -79,7 +79,6 @@ Edit your Python file to change:
 # ============================================================
 
 import logging
-import re
 
 from bs4 import BeautifulSoup, Tag
 import pandas as pd
@@ -264,14 +263,6 @@ def run_transform(
     )
     LOG.info(f"Calculated author count: {author_count}")
 
-    # Calculate derived field: number of sentences in abstract
-    if abstract != "unknown":
-        sentences = [s for s in re.split(r"(?<=[.!?])\s+", abstract) if s.strip()]
-        sentence_count: int = len(sentences)
-    else:
-        sentence_count = 0
-    LOG.info(f"Calculated abstract sentence count: {sentence_count}")
-
     LOG.info("========================")
     LOG.info("STAGE 03f: Build record and create DataFrame")
     LOG.info("========================")
@@ -285,7 +276,6 @@ def run_transform(
         "abstract": abstract,
         "abstract_word_count": abstract_word_count,
         "author_count": author_count,
-        "sentence_count": sentence_count,
     }
 
     df = pd.DataFrame([record])
@@ -296,7 +286,6 @@ def run_transform(
     LOG.info(f"  Title: {title}")
     LOG.info(f"  Author count: {record['author_count']}")
     LOG.info(f"  Abstract word count: {record['abstract_word_count']}")
-    LOG.info(f"  Abstract Sentence count: {record['sentence_count']}")
     LOG.info(f"  DataFrame preview:\n{df.head()}")
 
     LOG.info("Sink: Pandas DataFrame created")
